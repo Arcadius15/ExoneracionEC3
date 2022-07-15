@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.idat.api.model.Colegio;
 
 @Repository
-public interface ColegioRepository extends JpaRepository<Integer,Colegio>{
+public interface ColegioRepository extends JpaRepository<Colegio,Integer>{
     
 }

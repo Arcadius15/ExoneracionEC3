@@ -5,23 +5,23 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.idat.api.model.Colegio;
-import com.idat.api.repository.ColegioRepository;
+import com.idat.api.model.Aula;
+import com.idat.api.repository.AulaRepository;
 
 @Service
-public class ColegioServImpl implements ColegioServ{
-	
-	@Autowired
-	private ColegioRepository repository;
+public class AulaServImpl implements AulaServ{
+
+    @Autowired
+    private AulaRepository repository;
 
     @Override
-    public void guardar(Colegio item) {
+    public void guardar(Aula item) {
         repository.save(item);
         
     }
 
     @Override
-    public void editar(Colegio item) {
+    public void editar(Aula item) {
         repository.saveAndFlush(item);
         
     }
@@ -33,14 +33,14 @@ public class ColegioServImpl implements ColegioServ{
     }
 
     @Override
-    public Colegio obtener(int id) {
-        
+    public Aula obtener(int id) {
+        // TODO Auto-generated method stub
         return repository.findById(id).orElse(null);
     }
 
     @Override
-    public List<Colegio> listar() {
-        
+    public List<Aula> listar() {
+        // TODO Auto-generated method stub
         return repository.findAll();
     }
     
